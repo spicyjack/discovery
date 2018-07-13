@@ -12,18 +12,13 @@ fn main() -> ! {
     let micro_period = 50_u16;
 
     loop {
-      for idx in 0..4 {
-         let next = (idx + 1) % 4;
+      for idx in 0..8 {
+         let next = (idx + 1) % 8;
 
          leds[idx].on();
          delay.delay_ms(micro_period);
-         leds[idx + 4].on();
-         delay.delay_ms(half_period);
-
          leds[idx].off();
          delay.delay_ms(micro_period);
-         leds[idx + 4].off();
-         delay.delay_ms(half_period);
       }
    }
 }

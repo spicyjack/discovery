@@ -14,7 +14,6 @@ fn main() -> ! {
     loop {
       for idx in 0..8 {
          let next = (idx + 1) % 8;
-
          leds[idx].on();
          delay.delay_ms(micro_period);
          leds[idx].off();
